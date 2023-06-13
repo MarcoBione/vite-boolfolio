@@ -3,16 +3,16 @@
 
     <div class="container border border-2">
       <div class="row">
-        <div class="col">
+        <div class="col d-flex justify-content-between">
 
           <div class="card" v-for="project in projects">
 
-            <img :src="project.image" class="card-img-top" alt="...">
+            <img :src="project.image" class="card-img-top" :alt="project.name">
 
             <div class="card-body">
               <h5 class="card-title">{{ project.name }}</h5>
-              <p class="card-text">//</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <p class="card-text">{{ project.description }}</p>
+              <a href="#" class="btn btn-primary">info</a>
             </div>
 
           </div>
@@ -39,7 +39,7 @@ export default {
 
   methods: {
     getProjects() {
-      axios.get('http://127.0.0.1:8000/api/projects').then((res) => {
+      axios.get(this.apiBaseUrl + this.endPointProjects).then((res) => {
         this.projects = res.data.results.data;
         console.log('projects : ', this.projects);
         console.log(res.data.results.data);
@@ -53,4 +53,9 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.card {
+  width: 200px;
+  display: block;
+}
+</style>
