@@ -39,7 +39,7 @@ export default {
 
   methods: {
     getProjects() {
-      axios.get(this.apiBaseUrl + this.endPointProjects).then((res) => {
+      axios.get(this.apiBaseUrl + this.endPointProjects/*, { params: { page: projectsApiPage } }*/).then((res) => {
         this.projects = res.data.results.data;
         console.log('projects : ', this.projects);
         console.log(res.data.results.data);
