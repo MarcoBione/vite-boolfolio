@@ -1,4 +1,5 @@
 <template>
+  <HeaderApp />
   <!-- chiama questo pezzo tra questi tag se la url combacia con il nome del componente specificato nelle rotte -->
   <router-view>
 
@@ -32,8 +33,11 @@
 
 <script>
 import axios from 'axios';
+import HeaderApp from './components/HeaderApp.vue';
 export default {
   name: 'App',
+  components: { HeaderApp },
+
   data() {
     return {
       projects: [],
