@@ -14,7 +14,12 @@
                             <div class="card-body">
                                 <h5 class="card-title">{{ project.name }}</h5>
                                 <p class="card-text">{{ project.description }}</p>
-                                <a href="#" class="btn btn-primary">info</a>
+                                <!-- <a href="#" class="btn btn-primary">info</a> -->
+                                <p>
+                                    <router-link :to="{ name: 'singleproject', params: { id: project.id } }"
+                                        class="nav-link btn btn-primary">info</router-link>
+                                </p>
+
                             </div>
 
                         </div>
@@ -41,13 +46,12 @@ export default {
         }
 
     },
-
     methods: {
         getProjects() {
             axios.get(this.apiBaseUrl + this.endPointProjects/*, { params: { page: projectsApiPage } }*/).then((res) => {
                 this.projects = res.data.results.data;
                 console.log('projects : ', this.projects);
-                console.log(res.data.results.data);
+                //console.log(res.data.results.data);
             })
         }
     },
