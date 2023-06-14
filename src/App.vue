@@ -1,4 +1,10 @@
 <template>
+  <!-- chiama questo pezzo tra questi tag se la url combacia con il nome del componente specificato nelle rotte -->
+  <router-view>
+
+  </router-view>
+
+
   <div>
 
     <div class="container border border-2">
