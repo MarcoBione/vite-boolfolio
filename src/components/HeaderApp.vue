@@ -17,7 +17,8 @@
 
                         <!-- per fare routing non si usano le ancore normali -->
                         <!-- <a class="nav-link active" aria-current="page" href="#">Home</a> -->
-                        <router-link :to="{ name: route.route }" class="nav-link">{{ route.name }}</router-link>
+                        <router-link :to="{ name: route.route }" class="nav-link" active-class="active">{{ route.name
+                        }}</router-link>
 
 
                     </li>
