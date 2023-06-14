@@ -21,7 +21,7 @@ export default {
     methods: {
         getProject() {
             axios.get(`${this.apiBaseUrl}projects/${this.$route.params.id}` /*, { params: { page: projectsApiPage } }*/).then((res) => {
-                this.projects = res.data.results.data;
+                this.projects = res.data.results;
                 console.log('res: ', res);
                 console.log('id:', this.$route.params.id);
             })

@@ -1,3 +1,7 @@
+@use './styles/partials/variables' as *;
+// personal background import
+@import './styles/background.scss';
+
 $fa-font-path: '../webfonts';
 @import '@fortawesome/fontawesome-free/scss/fontawesome.scss';
 @import '@fortawesome/fontawesome-free/scss/solid.scss';
