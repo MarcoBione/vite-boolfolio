@@ -13,7 +13,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
 
-                    <li class="nav-item" v-for="(routes, index) in route" :key="index">
+                    <li class="nav-item" v-for="(route, index) in routes" :key="index">
 
                         <!-- per fare routing non si usano le ancore normali -->
                         <!-- <a class="nav-link active" aria-current="page" href="#">Home</a> -->
@@ -43,21 +43,13 @@ export default {
                     route: 'projects'
                 },
                 {
-                    name: 'Singleproject',
-                    route: 'singleproject'
-                },
-                {
                     name: 'About',
                     route: 'about'
                 },
                 {
                     name: 'Contact',
                     route: 'contact'
-                },
-                {
-                    name: 'Error',
-                    route: 'Error'
-                },
+                }
             ]
         }
     }

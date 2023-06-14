@@ -4,31 +4,6 @@
   <router-view>
 
   </router-view>
-
-
-  <div>
-
-    <div class="container border border-2">
-      <div class="row">
-        <div class="col d-flex justify-content-between">
-
-          <div class="card" v-for="project in projects">
-
-            <img :src="project.image" class="card-img-top" :alt="project.name">
-
-            <div class="card-body">
-              <h5 class="card-title">{{ project.name }}</h5>
-              <p class="card-text">{{ project.description }}</p>
-              <a href="#" class="btn btn-primary">info</a>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-  </div>
 </template>
 
 <script>
